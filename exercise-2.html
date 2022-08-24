@@ -1,0 +1,27 @@
+<html>
+  <body>
+    <div id="container">
+      <button type="button" id="fetch-post">
+        Fetch Post from LocalStorage
+      </button>
+
+      <h2>Post: <span id="post-title"></span></h2>
+    </div>
+  </body>
+</html>
+
+<script>
+
+  let fetch_btn = document.getElementById('fetch-post');
+  let ugo = document.getElementById('post-title');
+  let pippo = JSON.parse(localStorage.getItem('post'));
+
+  fetch_btn.addEventListener('click',
+  async function pluto() {
+    
+    ugo.innerHTML = pippo.title
+    
+  }
+  )
+
+</script>
